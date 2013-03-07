@@ -1,7 +1,7 @@
 Brackets-LineNavigator
 ======================
 
-Brackets extension to enable Ctrl-Right and Ctrl-Left normal operations or navigating through text
+Brackets extension to enable Ctrl-Right and Ctrl-Left normal operations when navigating through text
 
 
 How to
