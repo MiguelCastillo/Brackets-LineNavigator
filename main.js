@@ -23,7 +23,7 @@
  */
 
 
-/** Simple extension that adds a "File > Hello World" menu item */
+/** Brackets Extension to load line navigator CodeMirror addon */
 define(function (require, exports, module) {
 	"use strict";
 
@@ -34,19 +34,6 @@ define(function (require, exports, module) {
 
     // Load up the line navigator
     jQuery.getScript( require.toUrl("./") + "line-navigator.js");
-
-    CodeMirror.defaults.styleActiveLine = true;
-
-      // Make sure to enable line navigator for all documents
-    $(DocumentManager).on("currentDocumentChange", function() {
-      // Change the current editor in view
-      var editor = EditorManager.getCurrentFullEditor();
-
-      // Make sure we have a valid editor
-      if (editor && editor._codeMirror) {
-        editor._codeMirror.setOption("lineNavigator", true);
-      }
-    });
 
 });
 
