@@ -58,8 +58,8 @@
     if (!lineNavigatorRegister.registerGlobal){
       // Take over the old word navigation system so that functionality that
       // depends on word navigation can behave the same accross code mirror.
-      CodeMirror.commands.goWordLeft = CodeMirror.commands.goWordBoundaryLeft = lineNavigator.navigateLineLeft;
-      CodeMirror.commands.goWordRight = CodeMirror.commands.goWordBoundaryRight = lineNavigator.navigateLineRight;
+      CodeMirror.commands.goWordLeft = CodeMirror.commands.goGroupLeft = lineNavigator.navigateLineLeft;
+      CodeMirror.commands.goWordRight = CodeMirror.commands.goGroupRight = lineNavigator.navigateLineRight;
 
 	  // Add scrollLineUp and scrollLineDown as commands in code mirror
 	  CodeMirror.commands.scrollLineUp = lineNavigator.scrollLineUp;
